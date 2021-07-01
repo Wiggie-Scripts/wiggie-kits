@@ -1,6 +1,6 @@
 Citizen.CreateThread( function()
     updatePath = "/Wiggie-Scripts/wiggie-kits" -- your git user/repo path
-    resourceName = "wiggie-kits ("..GetCurrentResourceName()..")" -- the resource name
+    resourceName = "wiggie-kit ("..GetCurrentResourceName()..")" -- the resource name
     
     function checkVersion(err,responseText, headers)
         curVersion = LoadResourceFile(GetCurrentResourceName(), "version") -- make sure the "version" file actually exists in your resource root!
@@ -16,5 +16,5 @@ Citizen.CreateThread( function()
         end
     end
     
-    PerformHttpRequest("https://raw.githubusercontent.com/Wiggie-Scripts/wiggie-kits/main/wiggie-kits/version", checkVersion, "GET")
+    PerformHttpRequest("https://raw.githubusercontent.com/Wiggie-Scripts/wiggie-kits/main/wiggie-kit/version", checkVersion, "GET")
     end)
